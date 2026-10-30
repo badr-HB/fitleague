@@ -4,11 +4,127 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fit league</title>
+    <!--graduate-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Playball&display=swap" rel="stylesheet">
+    <!--inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playball&display=swap"
+        rel="stylesheet">
+    <!---->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="">
-    <p class="font-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, illo distinctio! Illum esse odio itaque a, tempora, magni reiciendis eaque, facere harum necessitatibus pariatur molestiae quis veniam nulla expedita quae!</p>
+<body class="size-full bg-[#F6F4E8]">
+    <header class="w-full h-125.25 flex items-center justify-center">
+        <div class="w-full flex justify-between px-32.5">
+            <div class="w-66 h-47.75 bg-white rounded-2xl space-y-6 flex flex-col justify-center items-center">
+                <p class="font-[Graduate] text-6xl text-black font-normal">5</p>
+                <p class="font-[Inter] text-black font-semibold text-[16px]">annulation</p>
+            </div>
+            <div class="w-66 h-47.75 bg-[#022C13] rounded-2xl space-y-6 flex flex-col justify-center items-center">
+                <p class="font-[Graduate] text-6xl text-[#CDEC11] font-normal">20</p>
+                <p class="font-[Inter] text-[#CDEC11] font-semibold text-[16px]">en cours</p>
+            </div>
+            <div class="w-66 h-47.75 bg-white rounded-2xl space-y-6 flex flex-col justify-center items-center">
+                <p class="font-[Graduate] text-6xl text-black font-normal">30</p>
+                <p class="font-[Inter] text-black font-semibold text-[16px]">fini</p>
+            </div>
+        </div>
+    </header>
+    <main class="w-full">
+        <section class="w-full h-159 bg-[#022C13] flex items-center justify-center cursor-pointer">
+            <div class="w-300 h-105 bg-[#FFFFFF] rounded-2xl px-8 flex flex-col justify-center space-y-4">
+                <div class="w-full h-29 bg-[#D9D9D9] rounded-2xl flex items-center px-5 space-x-6">
+                    <img src="./assets/images/pfpicon.png" alt="profile" />
+                    <div class="w-max space-y-5">
+                        <p class="font-[Graduate] text-[20px] font-normal">Force & Endurance</p>
+                        <p class="font-[Inter]  text-[18px] font-normal">Group du sport</p>
+                    </div>
+                </div>
+                <div class="w-full h-29 bg-[#D9D9D9] rounded-2xl flex items-center px-5 space-x-6">
+                    <img src="./assets/images/pfpicon.png" alt="profile" />
+                    <div class="w-max space-y-5">
+                        <p class="font-[Graduate] text-[20px] font-normal">Force & Endurance</p>
+                        <p class="font-[Inter]  text-[18px] font-normal">Group du sport</p>
+                    </div>
+                </div>
+                <div class="w-full h-29 bg-[#D9D9D9] rounded-2xl flex items-center px-5 space-x-6">
+                    <img src="./assets/images/pfpicon.png" alt="profile" />
+                    <div class="w-max space-y-5">
+                        <p class="font-[Graduate] text-[20px] font-normal">Force & Endurance</p>
+                        <p class="font-[Inter]  text-[18px] font-normal">Group du sport</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full h-194 flex justify-evenly items-center">
+            <div
+                class="w-[30%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
+                <h2 class="font-[Graduate] text-[48px] font-normal">ajoute defi</h2>
+                <form class="space-y-4">
+                    <input type="name" placeholder="nom de defi"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="name" placeholder="Sport"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="name" placeholder="description"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="name" placeholder="objectifi"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="name" placeholder="date limite"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="button" value="Cree Defi"
+                        class="text-white bg-[#022C13] rounded-xl h-10 w-45 font-[Graduate] flex place-self-end cursor-pointer mt-6" />
+                </form>
+            </div>
+            <div
+                class="w-[30%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
+                <h2 class="font-[Graduate] text-[48px] font-normal">ajoute utilisateur</h2>
+                <form class="space-y-4">
+                    <input type="name" placeholder="nom d’utilisateur"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="name" placeholder="pseudo name"
+                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                    <input type="button" value="cree utilisateur"
+                        class="text-white bg-[#022C13] rounded-xl h-10 w-50 font-[Graduate] flex place-self-end cursor-pointer mt-6" />
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full h-61 bg-[#022C13] flex flex-col justify-center">
+        <div class="w-auto h-max flex justify-evenly">
+            <div class="w-max space-y-3">
+                <p class="font-[Inter] text-white font-semibold">contact</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">+212 700503498</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">example@gmail.com</p>
+            </div>
+            <div class="w-max space-y-3">
+                <p class="font-[Inter] text-white font-semibold">about us</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">our policy </p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Reviews</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Careers</p>
+            </div>
+            <div class="w-max space-y-3">
+                <p class="font-[Inter] text-white font-semibold">contact</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Legal</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Privacy</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Securtiy</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Terms of use</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Acceptance policy</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Cookies</p>
+            </div>
+            <div class="w-max space-y-3">
+                <p class="font-[Inter] text-white font-semibold">contact</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Private Lessons</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Group Classes</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Online Lessons</p>
+                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Summer Camps</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
