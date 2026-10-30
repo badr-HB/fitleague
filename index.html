@@ -19,8 +19,8 @@
 </head>
 
 <body class="size-full bg-[#F6F4E8]">
-    <header class="w-full h-125.25 flex items-center justify-center">
-        <div class="w-full flex justify-between px-32.5">
+    <header class="w-full lg:h-125.25 h-auto flex items-center justify-center">
+        <div class="w-full flex flex-col space-y-3.5 lg:space-y-0 my-5 lg:my-0 justify-center items-center px-[4%] lg:px-[7%] lg:flex-row lg:justify-between">
             <div class="w-66 h-47.75 bg-white rounded-2xl space-y-6 flex flex-col justify-center items-center">
                 <p class="font-[Graduate] text-6xl text-black font-normal">5</p>
                 <p class="font-[Inter] text-black font-semibold text-[16px]">annulation</p>
@@ -37,7 +37,7 @@
     </header>
     <main class="w-full">
         <section class="w-full h-159 bg-[#022C13] flex items-center justify-center cursor-pointer">
-            <div class="w-300 h-105 bg-[#FFFFFF] rounded-2xl px-8 flex flex-col justify-center space-y-4">
+            <div class="lg:w-[63%] h-105 w-[70%] bg-[#FFFFFF] rounded-2xl px-8 flex flex-col justify-center space-y-4">
                 <div class="w-full h-29 bg-[#D9D9D9] rounded-2xl flex items-center px-5 space-x-6">
                     <img src="./assets/images/pfpicon.png" alt="profile" />
                     <div class="w-max space-y-5">
@@ -61,9 +61,9 @@
                 </div>
             </div>
         </section>
-        <section class="w-full h-194 flex justify-evenly items-center">
+        <section class="w-full md:h-194 h-auto flex flex-col md:flex-row justify-evenly items-center my-6 space-y-10 md:my-0 md:space-y-0">
             <div
-                class="w-[30%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
+                class="xl:w-[30%] md:w-[45%] w-[80%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
                 <h2 class="font-[Graduate] text-[48px] font-normal">ajoute defi</h2>
                 <form class="space-y-4">
                     <input type="name" placeholder="nom de defi"
@@ -81,7 +81,7 @@
                 </form>
             </div>
             <div
-                class="w-[30%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
+                class="xl:w-[30%] md:w-[45%] w-[80%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
                 <h2 class="font-[Graduate] text-[48px] font-normal">ajoute utilisateur</h2>
                 <form class="space-y-4">
                     <input type="name" placeholder="nom d’utilisateur"
@@ -94,34 +94,69 @@
             </div>
         </section>
     </main>
-    <footer class="w-full h-61 bg-[#022C13] flex flex-col justify-center">
-        <div class="w-auto h-max flex justify-evenly">
+    <footer class="w-full md:h-61 h-auto py-7 md:py-0 bg-[#022C13] flex flex-col justify-center">
+        <div class="w-auto h-max flex justify-evenly flex-col md:flex-row pl-8 space-y-8 md:pl-0 md:space-y-0">
             <div class="w-max space-y-3">
-                <p class="font-[Inter] text-white font-semibold">contact</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">+212 700503498</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">example@gmail.com</p>
+                <a href="/">
+                    <p class="font-[Inter] text-white font-semibold">contact</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">+212 700503498</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">example@gmail.com</p>
+                </a>
             </div>
             <div class="w-max space-y-3">
-                <p class="font-[Inter] text-white font-semibold">about us</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">our policy </p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Reviews</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Careers</p>
+                <a href="/">
+                    <p class="font-[Inter] text-white font-semibold ">about us</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">our policy </p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Reviews</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Careers</p>
+                </a>
             </div>
             <div class="w-max space-y-3">
-                <p class="font-[Inter] text-white font-semibold">contact</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Legal</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Privacy</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Securtiy</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Terms of use</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Acceptance policy</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Cookies</p>
+                <a href="/">
+                    <p class="font-[Inter] text-white font-semibold ">Legal</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Privacy</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Securtiy</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Terms of use</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Acceptance policy</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Cookies</p>
+                </a>
             </div>
             <div class="w-max space-y-3">
-                <p class="font-[Inter] text-white font-semibold">contact</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Private Lessons</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Group Classes</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Online Lessons</p>
-                <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px]">Summer Camps</p>
+                <a href="/">
+                    <p class="font-[Inter] text-white font-semibold ">Programs</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Private Lessons</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Group Classes</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Online Lessons</p>
+                </a>
+                <a href="/">
+                    <p class="font-[Inter] text-[#FFFFFF] font-light text-[12px] hover:text-[#ABABAB]">Summer Camps</p>
+                </a>
             </div>
         </div>
     </footer>
