@@ -1,5 +1,6 @@
 let defis = [
     {
+        id : 1,
         titre : "Basket Challenge",
         sport : "Basketball",
         description : "Marquez un maximum de paniers avant la fin du chrono pour battre le record !",
@@ -25,6 +26,7 @@ let defis = [
 
     },
     {
+        id : 2,
         titre : "Crossbar Challenge",
         sport : "Football",
         description : "Touchez la barre transversale un maximum de fois avant la fin du chrono !",
@@ -45,6 +47,7 @@ let defis = [
         status : "en cours"
     },
     {
+        id : 3,
         titre : "Max Reps Challenge",
         sport : "Musculation",
         description : "Réalisez un maximum absolu de tractions strictes en une seule série !",
@@ -60,6 +63,7 @@ let defis = [
         ]
     },
     {
+        id : 4,
         titre : "Le Flash Challenge",
         sport : "Course à pied",
         description : "Battez le chrono sur 100 mètres et devenez le plus rapide !",
@@ -80,6 +84,7 @@ let defis = [
         status : "annulé"
     },
     {
+        id : 5,
         titre : "Le Turbo Jump",
         sport : "Corde à sauter",
         description : "Enchaînez un maximum de sauts sans interruption avant la fin du chrono !",
@@ -104,6 +109,7 @@ let defis = [
         status : "terminé"
     },
     {
+        id : 6,
         titre : "L'Hydro-Sprint",
         sport : "Natation",
         description : "Parcourez un maximum de longueurs de bassin avant la fin du chrono !",

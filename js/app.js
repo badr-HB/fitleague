@@ -25,8 +25,36 @@ idDefis.innerHTML+=`<section class="bg-[#022C13] rounded-xl">
                     <p class="text-[#607966] text-2xl">${defi.description}</p>
                     <p class="text-[#607966] text-2xl">Objectif : ${defi.objectif}</p>
                     <p class="text-[#607966] text-2xl">Date limite : ${defi.datelimite}</p>
+                    <a class="participantsList" id="${defi.id}" href="#participants">Liste des participants</a>
                     <a class="px-6 py-4 rounded-xl border-2 text-2xl border-solid text-[#607966]" href="#">S'inscrire</a>
                 </div>
 
 </section>`
+}
+
+let selectedParticipant;
+
+let participantsListElement = document.querySelectorAll('.participantsList')
+
+participantsListElement.forEach(par => {
+    par.addEventListener("click", event => {
+        selectedParticipant = event.currentTarget.id
+        afficherParticipants(selectedParticipant)
+    })
+})
+
+
+
+
+
+function afficherParticipants(selectedParticipant){
+    let part = document.getElementById('participants')
+    part.innerHTML = ""
+    let par = defis.find((def) => def.id == selectedParticipant)
+
+    part.innerHTML+= `<h2>${par.titre}</h2>`
+    par.participants.forEach(participant =>
+        part.innerHTML += `<p> ${participant.pseudo}</p>`
+    )
+    
 }
