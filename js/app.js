@@ -2,34 +2,34 @@
 
 // Affichage des défis
 
-let defisList = []
+// let defisList = []
 
-defis.forEach(defi => {
-    defisList.push(defi.id)
-})
+// defis.forEach(defi => {
+//     defisList.push(defi.id)
+// })
 
+let idDefis=document.querySelector('#defis');
 
-
+    
 function afficherTousLesDefis(){
-    let idDefis=document.getElementById('defis');
     idDefis.innerHTML = ""
 
     defis.forEach(defi => {
 
-        if (defisList.includes(defi.id)){
-            afficherDefis(defi,idDefis);
-        }
+        
+            afficherDefis(defi);
+       
     })
 
-    
+let suprimmer=document.querySelectorAll('.supprimer')
 
+ajouterLactionSupprimer(suprimmer)
 }
 
 
 
 
-
-function afficherDefis(defi,idDefis){
+function afficherDefis(defi){
 
 
 idDefis.innerHTML+=`<section class="bg-[#022C13] rounded-xl" id="${defi.id}">
@@ -49,6 +49,8 @@ idDefis.innerHTML+=`<section class="bg-[#022C13] rounded-xl" id="${defi.id}">
                 </div>
 
 </section>`
+
+
 }
 
 
@@ -57,6 +59,7 @@ afficherTousLesDefis()
 
 // Affichage des participants
 
+function participants(){
 let selectedParticipant;
 
 let participantsListElement = document.querySelectorAll('.participantsList')
@@ -67,6 +70,10 @@ participantsListElement.forEach(par => {
         afficherParticipants(selectedParticipant)
     })
 })
+
+}
+
+
 
 
 
@@ -84,28 +91,53 @@ function afficherParticipants(selectedParticipant){
     
 }
 
+
+// participants()
+
 // Supprimer un défis
 
-function supprimerDefis(){
 
-let suprimmer=document.querySelectorAll('.supprimer')
+// let suprimmer=document.querySelectorAll('.supprimer')
 
-suprimmer.forEach(sup => {
+// function supprimerDefis(){
+
+
+//         ajouterLactionSupprimer()
+//         // defis.splice(defis.findIndex((defi)=>defi.id == Number(id)),1)
+//         ajouterLactionSupprimer()
+// }
+
+
+function ajouterLactionSupprimer(suprimmer) {
+    alert("ok")
+    suprimmer.forEach(sup => {
     
     sup.addEventListener("click", e =>{
 
-        alert("event supprimer ok ")
+        alert("supp ok")
         let id = e.currentTarget.parentElement.parentElement.parentElement.id
+         defis.splice(defis.findIndex((defi)=>defi.id == Number(id)),1)
 
-        defisList.splice(defisList.indexOf(Number(id)),1)
-        afficherTousLesDefis()
-        supprimerDefis()
-        alert(defisList)
+         afficherTousLesDefis()
+        
+
+        
+        
         
 
     })
 })
-
 }
 
-supprimerDefis()
+
+
+
+
+
+
+
+
+
+
+
+
