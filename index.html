@@ -49,31 +49,37 @@
             <div
                 class="xl:w-[30%] md:w-[45%] w-[80%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
                 <h2 class="font-[Graduate] text-[48px] font-normal">ajoute defi</h2>
-                <form class="space-y-4" id="first-defi-form">
-                    <input id="name-def" type="name" placeholder="nom de defi"
-                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6" required />
-                    <input id="sport" type="name" placeholder="Sport"
-                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6" required />
-                    <div class="w-full h-[90px] ">
-                        <input id="description" type="name" placeholder="description"
-                            class="border border-transparent w-full h-full bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6 placeholder:place-self-start break-keep" required />
-                    </div>
-                    <input id="objectif" type="name" placeholder="objectif"
-                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6" required/>
+                <form class="space-y-6" id="first-defi-form">
+                    <input id="name-def" type="text" placeholder="nom de defi"
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6"
+                        required />
+                    <input id="sport" type="text" placeholder="Sport"
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6"
+                        required />
+                    <input id="description" type="text" placeholder="description"
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6 placeholder:place-self-start break-keep"
+                        required />
+
+                    <input id="objectif" type="text" placeholder="objectif"
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6"
+                        required />
                     <input id="date" type="date"
-                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6" required/>
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6"
+                        required />
                     <input type="submit" value="Cree Defi"
-                        class="text-white bg-[#022C13] rounded-xl h-10 w-45 font-[Graduate] flex place-self-end cursor-pointer mt-6" id="submit_defi" required/>
+                        class="text-white bg-[#022C13] rounded-xl h-10 w-45 font-[Graduate] flex place-self-end cursor-pointer mt-6"
+                        id="submit_defi" required />
                 </form>
             </div>
             <div
                 class="xl:w-[30%] md:w-[45%] w-[80%] h-150 bg-[#CDEC11] rounded-4xl px-6 space-y-10 flex flex-col justify-center items-center">
                 <h2 class="font-[Graduate] text-[48px] font-normal">ajoute utilisateur</h2>
-                <form class="space-y-4" id="second-defi-form">
-                    <input id="name" type="name" placeholder="nom d’utilisateur"
-                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
-                    <input id="UserName" type="name" placeholder="pseudo name"
-                        class="w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] placeholder:pl-6" />
+                <form class="space-y-6" id="second-defi-form">
+                    <input id="name" type="text" placeholder="nom d’utilisateur"
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6" />
+                    <input id="UserName" type="text" placeholder="pseudo name"
+                        class="border border-transparent w-full h-[50.37px] bg-white rounded-2xl placeholder:text-[#D1D1D6] pl-6" />
+                    <p class="h-5 pl-3 " id="text-danger"></p>
                     <input id="submit_user" type="submit" value="cree utilisateur"
                         class="text-white bg-[#022C13] rounded-xl h-10 w-50 font-[Graduate] flex place-self-end cursor-pointer mt-6" />
                 </form>
