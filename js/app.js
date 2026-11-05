@@ -36,8 +36,8 @@ idDefis.innerHTML+=`<section class="bg-[#022C13] rounded-xl" id="${defi.id}">
                 <img class="w-100 h-48 rounded-t-xl"  src="${defi.image}" alt="">
                 <div class="m-6 flex flex-col gap-5">
                     <div class="flex gap-3">
-                        <img src="assets/icons/pen.png" alt="" class="w-10 h-10 modifier">
-                        <img src="assets/icons/rectangle.png" alt="" class="w-10 h-10 supprimer">
+                        <img src="assets/icons/pen.png" alt="" data-modifier="${defi.id}" class="w-10 h-10 modifier">
+                        <img src="assets/icons/rectangle.png" data-supprimer="${defi.id}" alt="" class="w-10 h-10 supprimer">
                     </div>
                     <h2 class="text-[#CDED10] text-4xl"> ${defi.titre}</h2>
                     <h3 class="text-[#607966] text-2xl">Sport : ${defi.sport}</h3>
@@ -102,20 +102,19 @@ function afficherParticipants(selectedParticipant){
 // function supprimerDefis(){
 
 
-//         ajouterLactionSupprimer()
-//         // defis.splice(defis.findIndex((defi)=>defi.id == Number(id)),1)
+        // defis.splice(defis.findIndex((defi)=>defi.id == Number(id)),1)
 //         ajouterLactionSupprimer()
 // }
 
 
 function ajouterLactionSupprimer(suprimmer) {
-    alert("ok")
+    
     suprimmer.forEach(sup => {
     
     sup.addEventListener("click", e =>{
-
-        alert("supp ok")
-        let id = e.currentTarget.parentElement.parentElement.parentElement.id
+        
+        
+        let id = e.currentTarget.dataset.supprimer
          defis.splice(defis.findIndex((defi)=>defi.id == Number(id)),1)
 
          afficherTousLesDefis()
