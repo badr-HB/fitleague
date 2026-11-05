@@ -5,7 +5,7 @@ const defiss = document.getElementById("defiParent");
 const first_form = document.getElementById("first-defi-form");
 const second_form = document.getElementById("second-defi-form");
 const submitbtn = document.getElementById("submit_defi");
-const submitbtn2 = document.getElementById("submit_user")
+const submitbtn2 = document.getElementById("submit_user");
 const defi_name = document.getElementById("name-def");
 const sport = document.getElementById("sport");
 const description = document.getElementById("description");
@@ -13,14 +13,12 @@ const objectif = document.getElementById("objectif");
 const date = document.getElementById("date");
 const nom_utilisateur = document.getElementById("name");
 const username = document.getElementById("UserName");
-let alldefi = [], participants = [];
+let alldefi = [];
+let participants = [];
 const regex = /\w{6}/;
 
-const pullfromlocal = JSON.parse(localStorage.getItem('defis'))
-const getparticipant = JSON.parse(localStorage.getItem('participants'))
 
 
-affiche_statistiques();
 function affiche_statistiques() {
     // const status = pullfromlocal.status;
     // const counter1 = status.filter(t => t.status === "en cours");
@@ -29,11 +27,10 @@ function affiche_statistiques() {
     // box2.textContent = `${counter2.length}`
     // const counter3 = status.filter(t => t.status === "annulé");
     // box3.textContent = `${counter3.length}`
-    getparticipant.forEach((e) => {
-        console.log(e.username);
-    })
-    
+
 }
+affiche_statistiques();
+
 // affichage_defi()
 function affichage_defi() {
     for (let i = 0; i < 3; i++) {
@@ -51,6 +48,9 @@ function affichage_defi() {
 
 submitbtn.addEventListener("click", (event) => {
     event.preventDefault();
+    alldefi = JSON.parse(localStorage.getItem('defis')) || [];
+    localStorage.clear();
+
     if (defi_name.value != "" && regex.test(defi_name.value) && sport.value != "" && description.value != "" && objectif.value != "" && date.value != "") {
 
         const search = alldefi.find(t => t.titre == defi_name.value);
@@ -65,12 +65,10 @@ submitbtn.addEventListener("click", (event) => {
                     status: "en cours"
                 }
             )
-            localStorage.setItem('defis',JSON.stringify(alldefi))
         }
         else {
             alert("defi already exists")
         }
-
 
         changeColorBack(defi_name, sport, description, objectif, date)
         first_form.querySelectorAll('input[type = "text"]').forEach((element) => {
@@ -83,9 +81,10 @@ submitbtn.addEventListener("click", (event) => {
         first_form.querySelectorAll('input[type = "text"]').forEach((element) => {
             element.value = '';
         })
-        first_form.querySelector('input[type = "date"]').value = '';
+        // first_form.querySelector('input[type = "date"]').value = '';
 
     }
+    addtolocal()
 
 
 })
@@ -94,15 +93,18 @@ submitbtn.addEventListener("click", (event) => {
 //add user
 submitbtn2.addEventListener('click', (event) => {
     event.preventDefault();
-    
+    participants = JSON.parse(localStorage.getItem('participants')) || [];
+    localStorage.clear();
+
     if (nom_utilisateur.value != '' && username.value != '' && regex.test(nom_utilisateur.value) && regex.test(username.value)) {
         const search = participants.find((array) => array.username == username.value)
         if (!search) {
-            
-            localStorage.setItem(JSON.stringify(username.value),JSON.stringify(nom_utilisateur.value))
-            
-            document.getElementById('text-danger').textContent = "";
+            participants.push({
+                nom: nom_utilisateur.value,
+                username: username.value
+            })
 
+            document.getElementById('text-danger').textContent = "";
         }
         else {
             document.getElementById('text-danger').textContent = "user already exists";
@@ -113,9 +115,15 @@ submitbtn2.addEventListener('click', (event) => {
         document.getElementById('text-danger').textContent = "Please fill out this field and write 6 elements"
         document.getElementById('text-danger').classList.add('text-[#EE4B2B]')
     }
+    addtolocal();
 
 })
 // 
 
 function changeColortoRed(...params) { params.forEach((e) => { e.classList.add('border-red-500'), e.classList.remove('border-transparent') }) }
 function changeColorBack(...params) { params.forEach((e) => { e.classList.remove('border-red-500'), e.classList.add('border-transparent') }) }
+
+function addtolocal() {
+    localStorage.setItem('defis', JSON.stringify(alldefi))
+    localStorage.setItem('participants', JSON.stringify(participants))
+}
