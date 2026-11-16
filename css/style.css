@@ -1,1 +1,5 @@
-@import "tailwindcss";
+
+input[type = "date"]{
+    color: #D1D1D6;
+    padding-left: 24px;
+}
